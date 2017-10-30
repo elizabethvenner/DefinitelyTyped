@@ -34,6 +34,7 @@ declare module "ssh2-sftp-client" {
       put(buffer:Buffer, remoteFilePath:string, useCompression?:boolean):Promise<void>;
       put(stream:NodeJS.ReadableStream, remoteFilePath:string, useCompression?:boolean):Promise<void>;
       mkdir(remoteFilePath:string, recursive?:boolean):Promise<void>;
+      rmdir(remoteFilePath:string, recursive?:boolean):Promise<void>;
       delete(remoteFilePath:string):Promise<void>;
       rename(remoteSourcePath:string, remoteDestPath:string):Promise<void>;
       end():Promise<void>;
